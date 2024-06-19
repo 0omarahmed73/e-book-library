@@ -31,7 +31,7 @@ function NavBar() {
           <div className={styles.logo}>
             <img src={logo} alt="" />
           </div>
-          <h1>E-Book</h1>
+          <h1>Byt El-Hekma</h1>
         </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
