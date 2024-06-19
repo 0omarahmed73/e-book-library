@@ -26,7 +26,7 @@ function SignUp() {
     validateOnMount: true,
     validationSchema: Yup.object().shape({
       email: Yup.string().email().required(),
-      password: Yup.string().required().max(7),
+      password: Yup.string().required().min(6),
     }),
   });
   return (
