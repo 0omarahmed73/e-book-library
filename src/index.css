@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+:root {
+  --primary: #fff;
+  --secondary: #000;
+  --less-degree: #F3F4F6;
+  --navbar: #fff;
+  --secondary-text: #2097D4;
+  --third-text: rgb(156 163 175 / var(--tw-text-opacity));
+  --card-hover: #1182c5;
+  --box-shadow: #00000047;
+  --comment: #E7F2F9;
+}
+
+[data-theme='dark'] {
+  --primary: #030712;
+  --secondary: #fff;
+  --less-degree: #030712;
+  --navbar: #111827;
+  --third-text: #D1D5DB;
+  --box-shadow: #ffffff47;
+  --comment: #1F2937
+}
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.navbar {
+  transition: 0.3s ease-in-out;
+  background-color: var(--navbar) !important;
+  min-height: 80px;
+}
+
+
+/* Spinner */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--secondary);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-main {
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--secondary);
+  }
+
+  &:disabled {
+    opacity: 0.5 !important;
+    background-color: var(--secondary);
+    color: var(--primary);
+    
+  }
+}
+
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 125px);
+  flex-direction: column;
+  gap: 20px;
+  color: var(--secondary) !important;
+}
+
+.searchItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--box-shadow);
+  background-color: var(--comment);
+  transition: 0.3s ease-in-out;
+  min-height: 300px !important;
+  padding-bottom: 20px;
+
+  &:hover {
+    background-color: var(--card-hover);
+  }
+
+  & * {
+    color: var(--secondary) !important;
+  }
+}
+
+.Toastify__toast {
+  @media screen and (max-width: 768px) {
+    margin: 30px;
+
+  }
+}
+
+.text-error {
+  border: 1px solid red;
+}
+
+.dropdown-toggle {
+  text-align: center !important;
+}
+
+.btn-danger {
+  color: white !important;
+}

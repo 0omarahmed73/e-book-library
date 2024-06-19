@@ -1,0 +1,23 @@
+.nextSection {
+  background-color: var(--navbar);
+  padding-bottom: 20px;
+  border-top: 1px solid var(--box-shadow);
+  padding-inline: 29px !important;
+
+  & h2 {
+    padding: 0;
+    margin: 0;
+    color: var(--secondary);
+    font-weight: bold;
+  }
+
+  & .desc {
+    all: unset;
+    color: var(--third-text) !important;
+    font-size: 14px !important;
+  }
+}
+
+.topTrend {
+  color: var(--secondary-text) !important;
+}

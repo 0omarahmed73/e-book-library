@@ -1,0 +1,17 @@
+
+
+.trendBookContainer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  scale: 0;
+  transition: 0.7s ease-in-out;
+  margin-bottom: 30px;
+}
+
+.visible {
+  scale: 1;
+}

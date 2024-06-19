@@ -1,0 +1,117 @@
+.container {
+  min-height: 120vh;
+  width: 100%;
+  padding-bottom: 50px;
+  background-color: var(--less-degree);
+  background-image: url('./public/blue-pattern-frndFZgs.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  & .innerContainer {
+    display: flex;
+    min-height: calc(120vh - 80px);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-inline: 20px;
+
+    & h1 {
+      padding: 0;
+      color: var(--secondary);
+      margin: 0;
+      font-size: 70px;
+      font-weight: bold;
+      text-transform: capitalize;
+
+      @media screen and (max-width: 768px) {
+        font-size: 50px;
+        text-align: center;
+
+      }
+
+      @media screen and (max-width: 408px) {
+        font-size: 40px;
+        text-align: center;
+
+      }
+    }
+
+    .author {
+      color: var(--secondary-text);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--secondary);
+      font-size: 15px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+
+    }
+  }
+}
+
+.yourElement {
+  opacity: 1;
+  transform: translateY(120px);
+  /* Start slightly below the view */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.yourElement.visible {
+  opacity: 1;
+  transform: translateY(0);
+  /* Move to original position */
+}
+
+
+.nextSection {
+  height: 100vh;
+}
+
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100%;
+  padding-inline: 20px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.imgContainer1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  padding-inline: 20px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.imgsList {
+  display: flex;
+  justify-content: center;
+}

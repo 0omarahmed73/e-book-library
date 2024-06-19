@@ -1,0 +1,72 @@
+.bookCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--navbar);
+  color: var(--secondary) !important;
+  border-radius: 10px;
+  padding: 20px;
+  height: 300px;
+  box-shadow: 0 0 12px 0px var(--box-shadow);
+  transition: 0.3s ease-in-out;
+
+  @media screen and (max-width: 999px) {
+    margin-bottom: 70px;
+  }
+
+  & h3 {
+    color: var(--secondary) !important;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  & p {
+    color: var(--third-text) !important;
+    font-size: 14px;
+  }
+
+  .img {
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -50px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &:hover {
+    background-color: var(--card-hover);
+  }
+}
+
+.nextPart {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & * {
+    display: block !important;
+    text-align: center !important;
+  }
+}
+
+.stars {
+  display: flex !important;
+  margin-bottom: 10px;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}

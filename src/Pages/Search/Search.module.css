@@ -1,0 +1,142 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  justify-content: start;
+  min-height: calc(100vh - 125px);
+  width: 100%;
+}
+
+form.searchForm {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+
+  }
+}
+
+.inputSearch {
+  width: 100% !important;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--secondary);
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--secondary) !important;
+  background-color: var(--primary) !important;
+
+  &::placeholder {
+    color: var(--secondary) !important;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+
+    &::placeholder {
+      color: transparent !important;
+    }
+  }
+}
+
+.searchResult {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  background-color: var(--navbar);
+  min-height: 50vh;
+  margin-bottom: 10px;
+
+  & * {
+    color: var(--secondary) !important;
+    text-align: center !important;
+  }
+
+  & h1 {
+    margin: 0;
+    padding: 0;
+    color: var(--secondary);
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+}
+
+.img {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+.searchItems {
+  margin-top: 20px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  /* Ensure items stretch to match the height of the tallest item */
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--navbar);
+  border: 1px solid var(--secondary);
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--secondary);
+
+    & * {
+      color: var(--primary) !important;
+    }
+  }
+
+  & * {
+    color: var(--secondary) !important;
+  }
+
+  & h1 {
+    margin: 0;
+    padding: 0;
+    color: var(--secondary);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+}

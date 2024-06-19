@@ -1,0 +1,25 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  & h1 {
+    color: var(--secondary);
+  }
+}
+
+.allItems {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  gap: 20px;
+  & * {
+    text-align: center !important;
+  }
+}
