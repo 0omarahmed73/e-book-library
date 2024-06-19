@@ -24,7 +24,7 @@ function Login() {
     validateOnMount: true,
     validationSchema: Yup.object().shape({
       email: Yup.string().email().required(),
-      password: Yup.string().required(),
+      password: Yup.string().required().min(6),
     }),
   });
   const { loginWithGoogle, loginWithEmailAndPassword } =
