@@ -17,7 +17,10 @@ function App() {
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
         <Route index element={<Home />} />
-        <Route path="cart"   element={userLogged ? <Cart /> : <Navigate to={"/login"} />} />
+        <Route
+          path="cart"
+          element={userLogged ? <Cart /> : <Navigate to={"/login"} />}
+        />
         <Route path="search" element={<Search />} />
         <Route path="categories" element={<Categories />}></Route>
         <Route path="/categories/:category" element={<Category />} />
@@ -25,7 +28,10 @@ function App() {
           path="sign-up"
           element={!userLogged ? <SignUp /> : <Navigate to={"/"} />}
         />
-        <Route path="favorite" element={userLogged ? <Favorite /> : <Navigate to={"/login"} />} />
+        <Route
+          path="favorite"
+          element={userLogged ? <Favorite /> : <Navigate to={"/login"} />}
+        />
         <Route
           path="login"
           element={!userLogged ? <Login /> : <Navigate to={"/"} />}

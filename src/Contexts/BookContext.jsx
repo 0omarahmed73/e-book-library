@@ -365,8 +365,6 @@ export const BooksProvider = ({ children }) => {
     toast.success("Book removed from cart");
   };
   const setupFavoritesListener = () => {
-    if (!userLogged) return;
-
     const db = getFirestore(app);
     const favoritesCollection = collection(db, "favorites");
     const q = query(favoritesCollection, where("user", "==", userLogged));
