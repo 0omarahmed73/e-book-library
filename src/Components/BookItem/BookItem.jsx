@@ -20,7 +20,11 @@ function BookItem({ item }) {
       setupFavoritesListener();
     }
   }, [userLogged]);
-
+  const handleSubmit = (e, item) => {
+    e.preventDefault();
+    addToCart({ item, quantity });
+    handleClose();
+  };
   return (
     <Col
       key={item.id}
@@ -71,7 +75,10 @@ function BookItem({ item }) {
                 <h2>{item.title}</h2>
                 <p>Author: {item.author}</p>
                 <div className="d-flex flex-column gap-2 flex-md-row">
-                  <Form className={styles.form}>
+                  <Form
+                    onSubmit={(e) => handleSubmit(e, item)}
+                    className={styles.form}
+                  >
                     <Form.Control
                       type="number"
                       value={quantity}
